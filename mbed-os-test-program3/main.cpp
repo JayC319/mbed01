@@ -3,8 +3,8 @@
 DigitalOut myLED(LED1);
 DigitalOut myLED2(LED3);
 
-void Led(DigitalOut &ledpin);
-void Led2(DigitalOut &ledpin);
+void Led(DigitalOut &ledpin, int n);
+
 
 int main()
 {
@@ -13,7 +13,7 @@ int main()
     while(true)
     {
         
-        Led2(myLED2);
-        Led(myLED);
+        Led(myLED2,6);
+        Led(myLED,4);
     }
 }
