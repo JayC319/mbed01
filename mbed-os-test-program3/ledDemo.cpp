@@ -1,8 +1,8 @@
 #include "mbed.h"
 
-void Led(DigitalOut &ledpin)
+void Led(DigitalOut &ledpin,int cycle_num)
 {
-   for(int i = 0; i < 4; ++i)
+   for(int i = 0; i < cycle_num; ++i)
     {
         ledpin = !ledpin;
         ThisThread::sleep_for(500ms);
@@ -11,16 +11,6 @@ void Led(DigitalOut &ledpin)
     ledpin = 0;
 }
 
-
-void Led2(DigitalOut &ledpin)
-{
-   for(int i = 0; i < 6; ++i)
-    {
-        ledpin = !ledpin;
-        ThisThread::sleep_for(500ms);
-    }
-    ledpin = 0;
-}
 
 
 
